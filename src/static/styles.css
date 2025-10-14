@@ -158,15 +158,40 @@ footer {
 }
 
 .participants ul {
-  list-style: disc;
-  margin: 0 0 0 20px;
+  list-style: none; /* hide default bullets */
+  margin: 0;
   padding: 0;
 }
 
 .participants li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   font-size: 14px;
   color: #555;
-  padding: 4px 0;
+  padding: 6px 0;
+}
+
+.participant-item span {
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.delete-btn:hover {
+  background: rgba(198, 40, 40, 0.08);
 }
 
 /* Friendly placeholder when no participants */
